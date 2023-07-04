@@ -1,0 +1,15 @@
+@use '../theme/var.scss' as *;
+
+.root-view{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  .sidebar{
+    width: 3.75rem;
+  }
+  .router-view{
+
+  }
+}

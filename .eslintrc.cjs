@@ -8,14 +8,15 @@ module.exports = defineConfig({
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'prettier',
     'plugin:prettier/recommended'
   ],
 
   parser: '@typescript-eslint/parser',
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  plugins: ['react-refresh', '@typescript-eslint', 'prettier'],
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module', ecmaFeatures: { jsx: true } },
+  plugins: ['react', 'react-refresh', '@typescript-eslint', 'prettier'],
   rules: {
     'prettier/prettier': ['error', { printWidth: 120 }],
     'react-refresh/only-export-components': 'warn',

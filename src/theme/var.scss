@@ -1,0 +1,71 @@
+:root{
+  --gc-color-white: #ffffff;
+  --gc-color-black: #000000;
+
+  --gc-bg-dark: #1e1e20;
+  --gc-border-dark: rgba(82, 82, 89, .68);
+  --gc-divider-dark: rgba(82, 82, 89, .32);
+  --gc-text-dark: rgba(235, 235, 245, .6);
+
+  --gc-bg-light: #ffffff;
+  --gc-border-light: rgba(60, 60, 67, .29);
+  --gc-divider-light: rgba(60, 60, 67, .12);
+  --gc-text-light: rgba(60, 60, 67);
+
+  --gc-bg: var(--gc-bg-light);
+  --gc-border: var(--gc-border-light);
+  --gc-divider: var(--gc-divider-light);
+  --gc-text: var(--gc-text-light);
+
+  --gc-font-smaller: 10px;
+  --gc-font-small: 12px;
+  --gc-font-normal: 14px;
+  --gc-font-medium: 16px;
+  --gc-font-medium-2: 18px;
+  --gc-font-large: 20px;
+  --gc-font-larger: 22px;
+  --gc-font-largerst: 24px;
+  --gc-font-super: 28px;
+  --gc-font-huge: 36px;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --gc-bg: var(--gc-bg-dark);
+    --gc-border: var(--gc-border-dark);
+    --gc-divider: var(--gc-divider-dark);
+    --gc-text: var(--gc-text-dark);
+  }
+}
+
+//定义混入
+@mixin font-weight-normal {
+  font-weight: 400;
+  font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+}
+@mixin font-weight-medium {
+  font-weight: 500;
+  font-family: PingFangSC-Medium, PingFang SC;
+}
+@mixin font-weight-bold {
+  font-weight: bold;
+  font-family: PingFangSC-Bold, PingFang SC;
+}
+
+@mixin main-text($color:var(--gc-text), $size:var(--gc-font-normal)){
+  @include font-weight-normal;
+  font-size: $size;
+  color: $color;
+}
+
+//定义函数
+@function getCssVar($args...){
+  $name: '--gc';
+  @each $item in $args{
+    @if $item != '' {
+      $name: $name + '-' + $item;
+    }
+  }
+  @return var(#{$name})
+}
