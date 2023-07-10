@@ -8,8 +8,17 @@
 
   .sidebar{
     width: 3.75rem;
+    border-right: getCssVar('border');
+    .sidebar-item{
+      @include main-text;
+      padding: .125rem;
+
+    }
   }
   .router-view{
-
+    flex: 1;
+  }
+  .app-container{
+    padding: getCssVar('gap-medium');
   }
 }

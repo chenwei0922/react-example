@@ -1,21 +1,32 @@
 :root{
   --gc-color-white: #ffffff;
   --gc-color-black: #000000;
+  --gc-color-primary: #96DC00;
+  /* #96dc00, 透明度0.1,即rgba(r,g,b,0.1) */
+  --gc-color-primary-1: #96dc001a;
+  /* #96dc00, 透明度0.5,即rgba(r,g,b,0.5) */
+  --gc-color-primary-2: #96dc0080;
+  --gc-color-danger: #f53f3f;
+  --gc-color-danger-7: #f56c6c;
+  --gc-color-danger-8: #fde2e2;
+  --gc-color-danger-9: #fef0f0;
+  --gc-color-warn: #ffb757;
+  --gc-color-warn-7: #e6a23c;
+  --gc-color-warn-8: #faecd8;
+  --gc-color-warn-9: #fdf6ec;
+  --gc-color-info: #cbcbcb;
+  --gc-color-info-7: #909399;
+  --gc-color-info-8: #e9e9eb;
+  --gc-color-info-9: #f4f4f5;
+  --gc-color-success: #96dc00;
+  --gc-color-success-7: #67c23a;
+  --gc-color-success-8: #e1f3d8;
+  --gc-color-success-9: #f0f9eb;
 
-  --gc-bg-dark: #1e1e20;
-  --gc-border-dark: rgba(82, 82, 89, .68);
-  --gc-divider-dark: rgba(82, 82, 89, .32);
-  --gc-text-dark: rgba(235, 235, 245, .6);
-
-  --gc-bg-light: #ffffff;
-  --gc-border-light: rgba(60, 60, 67, .29);
-  --gc-divider-light: rgba(60, 60, 67, .12);
-  --gc-text-light: rgba(60, 60, 67);
-
-  --gc-bg: var(--gc-bg-light);
-  --gc-border: var(--gc-border-light);
-  --gc-divider: var(--gc-divider-light);
-  --gc-text: var(--gc-text-light);
+  --gc-bg: #ffffff;
+  --gc-border: solid 1px rgba(60, 60, 67, .29);
+  --gc-divider:  rgba(60, 60, 67, .12);
+  --gc-text:  rgba(60, 60, 67);
 
   --gc-font-smaller: 10px;
   --gc-font-small: 12px;
@@ -28,14 +39,28 @@
   --gc-font-super: 28px;
   --gc-font-huge: 36px;
 
+  --gc-gap-mini: 5px;
+  --gc-gap-small: 10px;
+  --gc-gap-normal: 15px;
+  --gc-gap-medium: 20px;
+
+  --gc-radius-mini: .0625rem;
+  --gc-radius-small: .125rem;
+  --gc-radius-normal: .1875rem;
+  --gc-radius-medium: .25rem;
+
+  /* 动画时长 */
+  --gc-duration: 0.3s;
+  --gc-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+  --gc-component-size: 36px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root{
-    --gc-bg: var(--gc-bg-dark);
-    --gc-border: var(--gc-border-dark);
-    --gc-divider: var(--gc-divider-dark);
-    --gc-text: var(--gc-text-dark);
+    --gc-bg: #1e1e20;
+    --gc-border: solid 1px rgba(82, 82, 89, .68);
+    --gc-divider: rgba(82, 82, 89, .32);
+    --gc-text: rgba(235, 235, 245, .6);
   }
 }
 

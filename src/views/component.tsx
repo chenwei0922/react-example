@@ -1,20 +1,14 @@
 import React from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import './root.scss'
 
 const RootView = () => {
-  const navigate = useNavigate()
-  const goComp = () => {
-    navigate('/component')
-  }
   return (
     <section className="root-view">
       <div className="sidebar">
         <ul>
-          <li className="sidebar-item">Express</li>
-          <li className="sidebar-item" onClick={goComp}>
-            常用组件
-          </li>
+          <li className="sidebar-item">按钮</li>
+          <li className="sidebar-item">输入框</li>
         </ul>
       </div>
       <div className="router-view">

@@ -1,5 +1,60 @@
 @use '../../theme/var.scss' as *;
 
 .gc-button{
-  
+  height: getCssVar('component-size');
+  line-height:  getCssVar('component-size');
+  min-width: .75rem;
+  border-radius: getCssVar('radius-mini');
+  color: getCssVar('color-white');
+  margin-right: .1rem;
+  padding:0 getCssVar('gap-small');
+  display: inline-block;
+  cursor: pointer;
+  &--small{
+    font-size: getCssVar('font-small');
+  }
+  &--default{
+    font-size: getCssVar('font-normal');
+  }
+  &--large{
+    font-size: getCssVar('font-medium');
+  }
+  &:hover:not(.disabled){
+    opacity: 0.8;
+  }
+  &.disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  &.danger{
+    background-color: getCssVar('color-danger');
+  }
+  &.success{
+    background-color: getCssVar('color-success');
+  }
+  &.info{
+    background-color: getCssVar('color-info');
+  }
+  &.warn{
+    background-color: getCssVar('color-warn');
+  }
+  &.text{
+    background-color: transparent;
+    padding: 0;
+    height: initial;
+    line-height: initial;
+    min-width: auto;
+    &.danger{
+      color: getCssVar('color-danger');
+    }
+    &.success{
+      color: getCssVar('color-success');
+    }
+    &.info{
+      color: getCssVar('color-info');
+    }
+    &.warn{
+      color: getCssVar('color-warn');
+    }
+  }
 }

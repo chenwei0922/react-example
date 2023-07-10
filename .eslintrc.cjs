@@ -23,6 +23,8 @@ module.exports = defineConfig({
 
     //ts
     // 不允许使用require语句
-    '@typescript-eslint/no-var-requires': 'off'
+    '@typescript-eslint/no-var-requires': 'off',
+    // 禁止使用该any类型
+    '@typescript-eslint/no-explicit-any': 'off'
   }
 })

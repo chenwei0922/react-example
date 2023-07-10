@@ -9,11 +9,15 @@ import {
   // createHashRouter,
   // RouterProvider,
 } from 'react-router-dom'
+import InitFlexible from '../hooks/flexible'
 
 import RootView from '../views/root'
 import NotFound from '../views/404'
 import Error from '../views/error'
-import InitFlexible from '../hooks/flexible'
+import ExpressView from '../views/express'
+
+import ComponentView from '../views/component'
+import ButtonView from '../views/button'
 
 /*
 import { useNavigate } from 'react-router-dom';
@@ -59,10 +63,21 @@ const router = createBrowserRouter([
     path: '/',
     element: <RootView />,
     errorElement: <NotFound />,
-    children: [{ path: 'error', element: <Error /> }]
+    children: [
+      { path: '', element: <ExpressView /> },
+      { path: 'error', element: <Error /> },
+      { path: 'express', element: <ExpressView /> }
+    ]
   },
   { path: '/error', element: <Error /> },
-  { path: '/component', element: <RootView /> }
+  {
+    path: '/component',
+    element: <ComponentView />,
+    children: [
+      { path: '', element: <ButtonView /> },
+      { path: 'button', element: <ButtonView /> }
+    ]
+  }
 ])
 
 const Root = () => {
